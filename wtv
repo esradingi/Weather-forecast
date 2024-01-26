@@ -1,0 +1,76 @@
+
+.date-container {
+    font-weight:350;  
+}
+
+.date-container .time {
+    font-size: 70px;
+    font-weight: 100;
+    padding: 0%;
+}
+
+.date-container #am-pm {
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: 300;
+}
+
+.date-container .date {
+    font-size: 30px;
+}
+
+.current-info .date-container {
+    background: rgba(38, 83, 122, 0.4);
+    padding: 50px;
+    border-radius: 100px;
+    margin: 10px 0;
+    border: 1px solid #082871;
+}
+
+.date-container {
+    text-align: center;
+}
+
+
+.place-container .time-zone {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country {
+    font-size: 12px;
+    font-weight: 700;
+    
+}
+.place-container{
+    padding-top: 0px;
+    padding-left: 900px;
+    
+}
+
+.current-info .others {
+    display: flex;
+    flex-direction: column; 
+}
+
+.current-info .others .weather-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+}
+.weather-forecast{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+   
+}
+.future-forecast .weather-forecast{
+    bottom: 0;
+    width: 100%;
+    
+}
+.current-info .future-forecast .today{
+    padding-top: 170px;
+    margin: auto;
+}
