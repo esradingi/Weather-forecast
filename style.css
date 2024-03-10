@@ -17,8 +17,9 @@ body {
 }
 
 .container {
-    padding: 20px 40px 40px 60px;
+    padding: 20px 0px 20px 40px;
     color: #000;
+    
 }
 
 .current-info {
@@ -51,7 +52,7 @@ body {
 
 .current-info .date-container {
     padding: 50px 50px 50px 50px;
-    margin-top: 45px;
+    margin-top: px;
 
 }
 
@@ -63,7 +64,7 @@ body {
 .place-container {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10;
     margin: 100px
 }
 
@@ -94,7 +95,7 @@ body {
 
 .place-container {
     margin-left: 1000px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .weather-forecast {
@@ -118,14 +119,14 @@ body {
 
 .future-forecast {
 
-    margin-top: 50px;
+    margin-top: px;
     padding: 0px 0px 25px 15px;
     text-align: center;
 
 }
 
 .future-forecast .today {
-    padding: 10px 0px 15px 70px;
+    padding: 0px 0px 15px 70px;
     text-align: center;
     margin-right: 90px;
     font-weight: 450;
@@ -135,8 +136,28 @@ body {
     margin-bottom: 0px;
 }
 
+#input {
+    margin-left: 500px;
+    margin-bottom: 20px;
+}
+
+#search {
+    font-weight: 500px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background: none;
+    padding: 10px 10px 10px 10px;
+    color: #ffffff;
+    outline: none;
+    background: rgba(1, 51, 94, 0.6);
+    font-size: 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+}
+
 .future-forecast .today .day {
-    padding: 5px 5px 5px 5px;
+    padding: 0px 5px 5px 5px;
     background: rgba(1, 51, 94, 0.6);
     display: inline;
     display: inline-block;
@@ -175,17 +196,13 @@ body {
 
 .v_line {
     border-left: 1.5px solid rgb(1, 51, 94, 0.6);
-    height: 450px;
-    padding-top: 0px;
+    height: 410px;
+    padding-top: 40px;
     width: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.search{
-    margin-left: 10px;
-    margin-top: 0px;
 
-}
 
 @media only screen and (max-width:1000px) {
     .container {
@@ -193,6 +210,7 @@ body {
         padding-right: 5px;
         padding-left: 50px;
         margin-bottom: 10px;
+        overflow-y: scroll;
     }
 
     .current-info .date-container {
@@ -254,6 +272,27 @@ body {
 
     .v_line {
         margin-top: 60px;
+    }
+
+    .input {
+        margin-right: 100px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    
+    .search {
+        font-weight: 500px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        background: none;
+        padding: 10px 10px 10px 10px;
+        color: #ffffff;
+        outline: none;
+        background: rgba(1, 51, 94, 0.6);
+        font-size: 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        border: none;
     }
 
 }
