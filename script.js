@@ -12,21 +12,7 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 const API_KEY = '49cc8c821cd2aff9af04c9f98c36eb74';
 
-setInterval(() => {
-    const time = new Date();
-    const month = time.getMonth();
-    const date = time.getDate();
-    const day = time.getDay();
-    const hour = time.getHours();
-    const hoursIn12HrFormat = hour >= 13 ? hour % 12 : hour
-    const minutes = time.getMinutes();
-    const ampm = hour >= 12 ? 'PM' : 'AM'
 
-    timeEl.innerHTML = (hoursIn12HrFormat < 10 ? '0' + hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + `<span id="am-pm">${ampm}</span>`
-
-    dateEl.innerHTML = days[day] + ', ' + date + ' ' + months[month]
-
-}, 1000);
 
 getWeatherData();
 function getWeatherData() {
@@ -51,25 +37,29 @@ function showWeatherData(data) {
 
     currentWeatherItemsEl.innerHTML =
         `<div class="weather-item">
-          
-        <div>Humidity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</div>
+          <div class="h">
+        <div>Humidity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</div></div>
         
         <div>${humidity}%</div>
+        </div>
     
-    </div>
+    
     <div class="weather-item">
-        <div>Pressure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</div>
+    <div class="p">
+        <div>Pressure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</div></div>
         <div>${pressure}</div>
+        
         
         <br/>
         
 
     </div>
     <div class="weather-item">
-        <div>Wind Speed&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+    <div class="w">
+        <div>Wind Speed&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;</div></div>
         <div>${wind_speed}</div>
-       
-        </div>  
+       </div>
+    
     `;
 
     let otherDayForcast = ''
