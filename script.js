@@ -1,5 +1,5 @@
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
+var timeEl = document.getElementById('time');
+var dateEl = document.getElementById('date');
 const currentWeatherItemsEl = document.getElementById('current-weather-items');
 const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
@@ -51,17 +51,25 @@ function showWeatherData(data) {
 
     currentWeatherItemsEl.innerHTML =
         `<div class="weather-item">
-        <div>Humidity</div>
+          
+        <div>Humidity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</div>
+        
         <div>${humidity}%</div>
+    
     </div>
     <div class="weather-item">
-        <div>Pressure</div>
+        <div>Pressure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</div>
         <div>${pressure}</div>
+        
+        <br/>
+        
+
     </div>
     <div class="weather-item">
-        <div>Wind Speed</div>
+        <div>Wind Speed&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;</div>
         <div>${wind_speed}</div>
-    </div>  
+       
+        </div>  
     `;
 
     let otherDayForcast = ''
@@ -93,57 +101,57 @@ function showWeatherData(data) {
     weatherForecastEl.innerHTML = otherDayForcast;
 }
 
-document.getElementById('search').addEventListener('click',()=>{
-    var place= document.getElementById('input').value;
-    var urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
-    fetch(urlsearch).then((res)=>{
+document.getElementById('search').addEventListener('click', () => {
+    var place = document.getElementById('input').value;
+    var urlsearch = `http://api.openweathermap.org/data/2.5/weather?q=${place}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`;
+    fetch(urlsearch).then((res) => {
         return res.json();
-    }).then((data)=>{
-        console.log(data);  
+    }).then((data) => {
+        console.log(data);
         showsearchedWeatherData(data);
-    
+
     })
-    
+
 })
 
 
 
 function showsearchedWeatherData(data) {
     let { humidity, pressure } = data.main;
-   let{speed} =data.wind;
-   let { lat, lon } = data.coord;
+    let { speed } = data.wind;
+    let { lat, lon } = data.coord;
     timezone.innerHTML = data.timezone;
     countryEl.innerHTML = lat + 'N ' + lon + 'E'
 
 
 
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
 
-            console.log(data)
-            showWeatherData(data);
-        })
+        console.log(data)
+        showWeatherData(data);
 
-    }
+
+        function currentglobalTime() {
+
+            var d = new Date();
+            time = d.toLocaleTimeString('en-US', { timeZone: data.timezone })
+            console.log(time);
+            timeEl = time;
+        }
+
+        currentglobalTime();
+
+    })
+
+}
 showsearchedWeatherData();
 
-function currentglobalTime(data){
-    
-    var urlsearch= `https://timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam`;
-    fetch(urlsearch).then((res)=>{
-        return res.json();
-    }).then((data)=>{
-        console.log(data);  
-
-    
-    })
-        currentglobalTime();
-}
-
-    
-   
 
 
 
 
-       
-        
+
+
+
+
+
