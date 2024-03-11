@@ -19,11 +19,11 @@ body {
 .container {
     padding: 20px 0px 20px 40px;
     color: #000;
-    
+
 }
 
 .current-info {
-    padding-top: 20px;
+    padding-top: 0px;
     padding-left: 300px;
     margin-top: 15px;
     background: rgba(38, 83, 122, 0.4);
@@ -93,15 +93,29 @@ body {
     margin: 75px;
 }
 
+.h {
+
+    margin-left: 30px;
+}
+
+.p {
+    margin-left: 30px;
+}
+
+.w {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
 .current-info .others .weather-item {
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 500;
     padding-top: 90px;
     margin-left: 0px;
     padding-right: 100px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .place-container {
@@ -116,6 +130,7 @@ body {
 }
 
 .future-forecast .weather-forecast {
+
     padding-top: 0px;
     width: 100%;
     display: flex;
@@ -131,14 +146,13 @@ body {
 
 .future-forecast {
 
-    margin-top: px;
-    padding: 0px 0px 25px px;
+    padding: 0px 0px 25px 2px;
     text-align: center;
 
 }
 
 .future-forecast .today {
-    padding: 0px 0px 15px 70px;
+    padding: 0px 0px px 70px;
     text-align: center;
     margin-right: 90px;
     font-weight: 450;
@@ -176,13 +190,15 @@ body {
     border-radius: 40px;
     color: #ffffff;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .future-forecast .temp {
     font-size: 15px;
     margin-top: 0px;
-    
+    color: #000000;
+    font-weight: 500;
+
 }
 
 .weather-forecast .weather-forecast-item {
@@ -204,32 +220,33 @@ body {
 }
 
 .weather-forecast .weather-forecast-item .temp {
-    font-weight: 350;
+    font-weight: 500;
 }
 
 .v_line {
     border-left: 1.5px solid rgb(1, 51, 94, 0.6);
     height: 410px;
-    margin-top: 0px;
+    margin-top: 25px;
     width: 10px;
     margin-bottom: 10px;
 }
 
-.hline { 
+.hline {
     position: absolute;
-   margin-top:200px;
-   margin-left: 20px;
-     background:  rgb(1, 51, 94, 0.6);
-     width:265px; 
-     height:1px; 
-    }
+    margin-top: 220px;
+    margin-left: 20px;
+    background: rgb(1, 51, 94, 0.6);
+    width: 265px;
+    height: 1px;
+}
+
 .h_line {
     position: absolute;
-    margin-top:340px;
-    margin-left: 20px; 
-    width:265px; 
-    height:1px; 
-    background:  rgb(1, 51, 94, 0.6);
+    margin-top: 340px;
+    margin-left: 20px;
+    width: 265px;
+    height: 1px;
+    background: rgb(1, 51, 94, 0.6);
 }
 
 @media only screen and (max-width:1000px) {
@@ -307,7 +324,7 @@ body {
         margin-left: 0px;
         margin-bottom: 20px;
     }
-    
+
     .search {
         font-weight: 500px;
         margin-bottom: 10px;
