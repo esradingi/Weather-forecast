@@ -23,6 +23,9 @@ body {
 }
 
 .current-info {
+    padding-top: 20px;
+    padding-left: 300px;
+    margin-top: 15px;
     background: rgba(38, 83, 122, 0.4);
     border-radius: 10px;
     border: 0px solid #082871;
@@ -64,8 +67,8 @@ body {
 .place-container {
     position: absolute;
     right: 0;
-    top: 10;
-    margin: 100px
+    top: 0;
+    margin: 50px
 }
 
 .place-container .time-zone {
@@ -82,7 +85,12 @@ body {
 .current-info .others {
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 0px;
+    padding-right: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 75px;
 }
 
 .current-info .others .weather-item {
@@ -90,7 +98,10 @@ body {
     justify-content: space-between;
     font-size: 20px;
     font-weight: 300;
-    padding-top: 25px;
+    padding-top: 90px;
+    margin-left: 0px;
+    padding-right: 100px;
+    color: #ffffff;
 }
 
 .place-container {
@@ -105,9 +116,10 @@ body {
 }
 
 .future-forecast .weather-forecast {
-    padding-top: 10px;
+    padding-top: 0px;
     width: 100%;
     display: flex;
+    padding-left: 40px;
 
 }
 
@@ -120,7 +132,7 @@ body {
 .future-forecast {
 
     margin-top: px;
-    padding: 0px 0px 25px 15px;
+    padding: 0px 0px 25px px;
     text-align: center;
 
 }
@@ -144,7 +156,7 @@ body {
 #search {
     font-weight: 500px;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 00px;
     background: none;
     padding: 10px 10px 10px 10px;
     color: #ffffff;
@@ -164,12 +176,13 @@ body {
     border-radius: 40px;
     color: #ffffff;
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .future-forecast .temp {
     font-size: 15px;
     margin-top: 0px;
+    
 }
 
 .weather-forecast .weather-forecast-item {
@@ -191,18 +204,33 @@ body {
 }
 
 .weather-forecast .weather-forecast-item .temp {
-    font-weight: 300;
+    font-weight: 350;
 }
 
 .v_line {
     border-left: 1.5px solid rgb(1, 51, 94, 0.6);
     height: 410px;
-    padding-top: 40px;
+    margin-top: 0px;
     width: 10px;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-
+.hline { 
+    position: absolute;
+   margin-top:200px;
+   margin-left: 20px;
+     background:  rgb(1, 51, 94, 0.6);
+     width:265px; 
+     height:1px; 
+    }
+.h_line {
+    position: absolute;
+    margin-top:340px;
+    margin-left: 20px; 
+    width:265px; 
+    height:1px; 
+    background:  rgb(1, 51, 94, 0.6);
+}
 
 @media only screen and (max-width:1000px) {
     .container {
