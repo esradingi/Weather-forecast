@@ -83,39 +83,29 @@ body {
 }
 
 .current-info .others {
-    display: flex;
-    flex-direction: column;
+   
     margin-left: 0px;
-    padding-right: 100px;
+    padding-right: 10px;
     position: absolute;
     left: 0;
     top: 0;
-    margin: 75px;
+    margin: 50px;
+    color: #ffffff;
 }
 
-.h {
-
-    margin-left: 30px;
-}
-
-.p {
-    margin-left: 30px;
-}
-
-.w {
-    margin-top: 0px;
-    margin-left: 30px;
-}
 
 .current-info .others .weather-item {
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 500;
-    padding-top: 90px;
+    margin-top:105px;
+    padding-top: 0px;
     margin-left: 0px;
-    padding-right: 100px;
-    color: #000000;
+    margin-bottom: 95px;
+    padding-right: 60px;
+    color: #d2d6db;
+
 }
 
 .place-container {
@@ -134,7 +124,7 @@ body {
     padding-top: 0px;
     width: 100%;
     display: flex;
-    padding-left: 40px;
+    padding-left: 15px;
 
 }
 
@@ -191,13 +181,18 @@ body {
     color: #ffffff;
     margin-top: 0px;
     margin-bottom: 10px;
+    
 }
 
 .future-forecast .temp {
-    font-size: 15px;
-    margin-top: 0px;
+    font-size: 13px;
+   
     color: #000000;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 
 }
 
@@ -225,26 +220,39 @@ body {
 
 .v_line {
     border-left: 1.5px solid rgb(1, 51, 94, 0.6);
-    height: 410px;
-    margin-top: 25px;
+    height: 450px;
+    margin-top: 15px;
     width: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+.h{
+    margin-left: 30px;
+    
+    
 }
 
+.p {
+    margin-left: 30px;
+}
+
+.w {
+    margin-top: 0px;
+    margin-left: 30px;
+}
 .hline {
     position: absolute;
     margin-top: 220px;
-    margin-left: 20px;
+    margin-left: 10px;
     background: rgb(1, 51, 94, 0.6);
-    width: 265px;
+    width: 280px;
     height: 1px;
 }
 
 .h_line {
     position: absolute;
-    margin-top: 340px;
-    margin-left: 20px;
-    width: 265px;
+    margin-top: 370px;
+    margin-left: 10px;
+    width: 280px;
     height: 1px;
     background: rgb(1, 51, 94, 0.6);
 }
@@ -252,17 +260,15 @@ body {
 @media only screen and (max-width:1000px) {
     .container {
         padding: 100px;
-        padding-right: 5px;
+        padding-right: px;
         padding-left: 50px;
         margin-bottom: 10px;
-        overflow-y: scroll;
+        margin-right: 20px;
+        
+        
     }
 
-    .current-info .date-container {
-        padding-top: 0px;
-    }
-
-    .place-container {
+       .place-container {
         position: absolute;
         right: 0;
         top: 0;
@@ -276,7 +282,7 @@ body {
     .current-info {
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-x: scroll;
 
     }
 
@@ -307,16 +313,37 @@ body {
     }
 
     .current-info .others {
-        padding: 20px;
+        padding: 50px;
+        overflow-y: scroll;
     }
 
     .current-info .others .weather-item {
+       margin-top: 150px;
         font-size: 20px;
-
+        overflow-y: scroll;
+        
     }
 
     .v_line {
-        margin-top: 60px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .hline {
+        position: absolute;
+        margin-top: 260px;
+        margin-left: 10px;
+        background: rgb(1, 51, 94, 0.6);
+        width: 280px;
+        height: 1px;
+    }
+    
+    .h_line {
+        position: absolute;
+        margin-top: 440px;
+        margin-left: 10px;
+        width: 280px;
+        height: 1px;
+        background: rgb(1, 51, 94, 0.6);
     }
 
     .input {
